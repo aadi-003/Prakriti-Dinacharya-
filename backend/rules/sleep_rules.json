@@ -1,0 +1,65 @@
+{
+  "_doc": "Per-dosha sleep guidance. Engine reads: bedtime (HH:MM), routine (list). Optional: poor_sleep_routine (appended when sleep < 6h or quality <= 4) and high_stress_routine (appended when stress >= 7). Bedtime is shifted 20 minutes earlier automatically for poor sleep. Classical dinacharya-inspired wellness guidance, not medical advice.",
+  "vata": {
+    "bedtime": "22:15",
+    "routine": [
+      "Finish dinner by 7:00 PM — keep it warm and light",
+      "Dim lights and switch off screens 45 minutes before bed",
+      "Massage warm sesame oil on your feet and scalp (classical Vata practice)",
+      "5 minutes of slow, deep breathing once in bed",
+      "Keep the bedroom warm, quiet and dark",
+      "Aim for the same bedtime every night — Vata thrives on regularity"
+    ],
+    "poor_sleep_routine": [
+      "Take a warm bath or shower 1 hour before bed",
+      "Sip warm spiced milk with a pinch of nutmeg (if dairy suits you)",
+      "Write down tomorrow's tasks and worries to offload the mind",
+      "Listen to soft, slow instrumental music (see tonight's raga suggestions)"
+    ],
+    "high_stress_routine": [
+      "4-7-8 breathing: 4 rounds before lights out",
+      "Alternate-nostril breathing for 3-5 minutes",
+      "Body-scan relaxation from feet to head (5-8 minutes)"
+    ]
+  },
+  "pitta": {
+    "bedtime": "22:30",
+    "routine": [
+      "Finish dinner by 7:30 PM — avoid late, heavy or spicy meals",
+      "No work email or difficult discussions after 9:00 PM",
+      "Dim the lights; keep the bedroom cool and airy",
+      "5 minutes of cooling breathing (sheetali) or slow deep breathing",
+      "Light reading or gentle stretching — avoid stimulating content"
+    ],
+    "poor_sleep_routine": [
+      "Keep the room extra cool tonight and use only a light blanket",
+      "Avoid caffeine after 2 PM and heavy meals after 8 PM",
+      "Try 10 minutes of guided yoga nidra in bed"
+    ],
+    "high_stress_routine": [
+      "A slow 10-minute walk in the evening air",
+      "Write a 3-line journal: what went well, what can wait until tomorrow",
+      "Exhale-focused breathing (longer exhale than inhale) for 5 minutes"
+    ]
+  },
+  "kapha": {
+    "bedtime": "22:45",
+    "routine": [
+      "Keep dinner light and finish by 7:00 PM",
+      "A brisk 10-15 minute walk after dinner",
+      "Avoid daytime naps — they make night sleep heavier",
+      "Avoid heavy sweets and dairy in the evening",
+      "Warm shower before bed; keep the room slightly cool and fresh"
+    ],
+    "poor_sleep_routine": [
+      "Commit to a firm wake-up time tomorrow, even if tonight is short",
+      "No screens in bed — read something light instead",
+      "A few minutes of gentle stretching before bed"
+    ],
+    "high_stress_routine": [
+      "Gentle full-body stretching for 5 minutes",
+      "Journaling to clear the mind before bed",
+      "Slow, steady breathing: 4 seconds in, 6 seconds out"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "_doc": "Season definitions (Indian-context, simplified Ritucharya; user can override) and environmental influence rules. Thresholds below are transparent wellness heuristics, NOT clinical values.",
+  "seasons": {
+    "Summer": {
+      "diet_note": "Summer (Grishma): favour cooling, hydrating foods and keep meals light.",
+      "lifestyle_note": "Avoid peak-sun exposure (12–3 PM) and intense exertion in the heat.",
+      "pathya": ["Coconut water and cooling infusions (fennel, mint)", "Light, freshly cooked meals", "Juicy fruits with high water content"],
+      "apathya": ["Alcohol and excessive caffeine", "Very spicy, oily or fried food", "Intense midday sun exposure"]
+    },
+    "Monsoon": {
+      "diet_note": "Monsoon (Varsha): digestion is classically weaker — favour warm, light, easily digestible food.",
+      "lifestyle_note": "Keep dry and warm; prefer indoor activity during heavy rain.",
+      "pathya": ["Boiled and cooled water", "Warm, light, easily digestible food (khichdi, moong soup)", "Ginger, garlic and black pepper in cooking", "Steamed vegetables"],
+      "apathya": ["Street or stale food", "Raw leafy salads and juices", "Excess curd and cream", "Fried snacks"]
+    },
+    "Autumn": {
+      "diet_note": "Autumn (Sharad): favour warm, grounding, mildly astringent food as heat subsides.",
+      "lifestyle_note": "Keep regular meal times and protect against dryness.",
+      "pathya": ["Warm, grounding meals", "Ghee in small amounts", "Sweet and slightly astringent tastes", "Regular meal times"],
+      "apathya": ["Cold, dry and raw food in excess", "Skipping meals", "Excessive late-night screen time"]
+    },
+    "Winter": {
+      "diet_note": "Winter (Hemanta/Shishira): digestion is classically stronger — warm, nourishing food is favoured.",
+      "lifestyle_note": "Stay warm, keep a regular routine, and moisturise against dryness.",
+      "pathya": ["Warm nourishing one-pot meals and soups", "Nuts and seeds in moderation", "Ghee in small amounts", "Warm spiced drinks (turmeric milk, cinnamon tea)"],
+      "apathya": ["Cold drinks and ice cream", "Skipping meals", "Staying up very late"]
+    },
+    "Spring": {
+      "diet_note": "Spring (Vasanta): classically a Kapha season — favour light, dry, warming foods.",
+      "lifestyle_note": "More movement and earlier mornings help counter springtime heaviness.",
+      "pathya": ["Light, warm meals", "Bitter greens (methi) in small amounts", "Barley and warm honey-water (traditional spring staples)"],
+      "apathya": ["Heavy, oily and cold food", "Excess sweets", "Daytime sleeping"]
+    },
+    "default": {
+      "diet_note": "Eat seasonally, favouring freshly cooked, easily digestible meals.",
+      "lifestyle_note": "Keep a steady daily routine.",
+      "pathya": ["Freshly cooked, seasonal meals"],
+      "apathya": ["Excessively processed food"]
+    }
+  },
+  "environmental_influences": [
+    { "id": "hot_dry", "conditions": { "temperature": { "min": 32 }, "humidity": { "max": 35 } }, "effect": { "vata": 2, "pitta": 1 },
+      "explanation": "Hot and dry weather is classically considered Vata-aggravating and mildly Pitta-aggravating." },
+    { "id": "hot_humid", "conditions": { "temperature": { "min": 28 }, "humidity": { "min": 65 } }, "effect": { "pitta": 2 },
+      "explanation": "Hot and humid weather is classically considered Pitta-aggravating." },
+    { "id": "very_hot", "conditions": { "temperature": { "min": 33 }, "humidity": { "min": 36, "max": 64 } }, "effect": { "pitta": 1 },
+      "explanation": "High heat is classically Pitta-aggravating even without high humidity." },
+    { "id": "cold_damp", "conditions": { "temperature": { "max": 20 }, "humidity": { "min": 70 } }, "effect": { "kapha": 2, "vata": 1 },
+      "explanation": "Cold and damp conditions are classically considered Kapha-aggravating and can disturb Vata." },
+    { "id": "cold_dry", "conditions": { "temperature": { "max": 15 }, "humidity": { "max": 30 } }, "effect": { "vata": 2 },
+      "explanation": "Cold and dry weather is classically considered Vata-aggravating." },
+    { "id": "rain", "conditions": { "weather": { "in": ["rain", "thunderstorm", "drizzle"] } }, "effect": { "vata": 1, "kapha": 1 },
+      "explanation": "Rainy/monsoon conditions are classically associated with Vata and Kapha aggravation." },
+    { "id": "pleasant", "conditions": { "temperature": { "min": 20, "max": 30 }, "humidity": { "min": 35, "max": 60 } }, "effect": {},
+      "explanation": "Moderate temperature and humidity are considered balanced conditions in classical literature." }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "_doc": "Per-dosha exercise guidance. duration_minutes is the base; the engine adjusts for energy, activity, weather and heart-rate inputs and records why.",
+  "vata": {
+    "type": "Gentle, grounding movement", "duration_minutes": 25, "intensity": "low to moderate",
+    "examples": ["Slow yoga (hatha)", "Walking in nature", "Tai chi", "Gentle cycling"],
+    "note": "Vata benefits from regularity and warmth — avoid exhausting, high-intensity workouts."
+  },
+  "pitta": {
+    "type": "Moderate, cooling movement", "duration_minutes": 35, "intensity": "moderate, avoid overheating",
+    "examples": ["Swimming", "Cycling in the cool hours", "Moderate yoga flow", "Friendly (non-competitive) sports"],
+    "note": "Pitta benefits from effort without competition or heat — exercise in the morning, never in midday sun."
+  },
+  "kapha": {
+    "type": "Energizing, vigorous movement", "duration_minutes": 45, "intensity": "moderate to vigorous",
+    "examples": ["Brisk walking or jogging", "Sun salutations (Surya Namaskar)", "Strength training", "Dancing"],
+    "note": "Kapha benefits from consistent, sweat-inducing exercise — daily and invigorating."
+  }
+}

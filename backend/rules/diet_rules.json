@@ -1,0 +1,30 @@
+{
+  "_doc": "Per-dosha diet guidance (classical taste & food associations, phrased as general wellness advice). focus dosha list is combined with seasonal pathya/apathya by the recommendation engine.",
+  "vata": {
+    "favor_tastes": ["sweet", "sour", "salty"],
+    "favor": ["Warm, well-cooked meals (khichdi, soups, stews)", "Healthy oils and ghee in moderation", "Root vegetables (sweet potato, carrot, beetroot)", "Soaked almonds and dates", "Warm spiced milk (if dairy suits you)", "Ginger, cinnamon and cardamom"],
+    "avoid": ["Cold and frozen foods and drinks", "Raw salads in excess (especially at night)", "Dry snacks (crackers, popcorn)", "Excess caffeine and carbonated drinks", "Skipping meals", "Overfasting"],
+    "breakfast": ["Warm oats porridge with dates and soaked almonds", "Stewed fruit with cinnamon", "Warm spiced milk with a small portion of porridge"],
+    "lunch": ["Khichdi with ghee", "Mung soup with cooked grains", "Stewed root vegetables with rice"],
+    "dinner": ["Light vegetable soup", "Small portion of warm khichdi", "Stewed fruit or warm milk if hungry late"],
+    "guidance": ["Eat at regular times; sit down and eat slowly.", "Prefer warm over cold, cooked over raw today."]
+  },
+  "pitta": {
+    "favor_tastes": ["sweet", "bitter", "astringent"],
+    "favor": ["Cooling foods: cucumber, coriander, fennel", "Sweet fruits: melon, pomegranate, grapes, coconut", "Ghee and milk in moderation", "Leafy greens and bitter vegetables", "Rice, oats and wheat"],
+    "avoid": ["Chilli, vinegar and very spicy food", "Fermented, sour and salty food in excess", "Fried and greasy food", "Alcohol and red meat", "Skipping meals or eating while angry"],
+    "breakfast": ["Oats with milk and sweet fruit", "Rice porridge with cardamom", "Fresh fruit and soaked raisins"],
+    "lunch": ["Rice with coconut-based vegetable curry", "Leafy greens and bitter vegetables", "Wheat flatbread with cooling side dishes"],
+    "dinner": ["Light rice and moong soup", "Steamed vegetables with ghee", "Milk with a pinch of cardamom before bed (if it suits you)"],
+    "guidance": ["Do not skip lunch — midday is your strongest meal.", "Favour cooling, non-spicy preparations today."]
+  },
+  "kapha": {
+    "favor_tastes": ["pungent", "bitter", "astringent"],
+    "favor": ["Warm, light, well-spiced meals", "Steamed or sautéed vegetables", "Legumes and mung beans", "Ginger, black pepper, turmeric; honey in warm water", "Light grains: barley, millet, roasted oats"],
+    "avoid": ["Heavy dairy (curd, cheese, cream, ice cream)", "Fried and oily food", "Sweets and sugary drinks", "Daytime naps", "Overeating, especially at night"],
+    "breakfast": ["Stewed apple with cinnamon and clove", "Barley porridge with ginger", "Warm honey-lemon water with a light bite"],
+    "lunch": ["Barley or millet with steamed vegetables", "Mung soup with black pepper", "Spiced vegetable stir-fry with light grains"],
+    "dinner": ["Light vegetable soup", "Steamed vegetables with ginger", "Keep dinner small and early"],
+    "guidance": ["Favour light, warm, spiced food; make lunch your largest meal.", "A brisk walk after meals helps counter heaviness."]
+  }
+}

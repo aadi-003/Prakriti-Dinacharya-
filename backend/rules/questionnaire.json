@@ -1,0 +1,122 @@
+{
+  "title": "Prakriti Self-Assessment",
+  "instructions": "Answer for your LIFELONG, constitutional tendencies — not how you feel today. Pick the option that has described you for most of your life.",
+  "estimated_minutes": 5,
+  "_provenance": {
+    "status": "RECONSTRUCTED — VERIFY AGAINST YOUR SOURCE",
+    "note": "The reference questionnaire image was not machine-readable at build time. These 20 questions follow the standard classical Prakriti attribute set (body frame, skin, hair, eyes, appetite, digestion, sleep, memory, temperament, climate preference, etc.) used across standard dosha-assessment instruments. Replace or re-word items here to match your exact questionnaire — the format and scoring engine support drop-in updates. Do not treat this version as a verified transcription of your source document.",
+    "confidence": "High for trait structure; exact wording must be verified against your source."
+  },
+  "sections": [
+    { "id": "physical", "title": "Body & Physical Traits", "description": "Constitutional, long-term traits.",
+      "question_ids": ["body_frame", "weight_tendency", "skin", "hair", "eyes", "joints"] },
+    { "id": "digestive", "title": "Digestion & Sleep", "description": "Your typical, long-term patterns.",
+      "question_ids": ["appetite", "digestion", "thirst", "bowel", "sweating", "sleep_pattern"] },
+    { "id": "mental", "title": "Mind & Temperament", "description": "How your mind usually works.",
+      "question_ids": ["memory", "temperament", "speech", "decisions", "learning"] },
+    { "id": "lifestyle", "title": "Preferences & Lifestyle", "description": "Natural inclinations.",
+      "question_ids": ["climate", "activity_pace", "dreams"] }
+  ],
+  "questions": [
+    { "id": "body_frame", "category": "physical", "question_text": "What is your natural body frame?",
+      "options": [
+        { "text": "Light, thin build; narrow shoulders; long fingers; hard to gain weight", "dosha": "vata", "score": 1 },
+        { "text": "Medium, athletic, well-proportioned build with good muscle tone", "dosha": "pitta", "score": 1 },
+        { "text": "Solid, sturdy, heavier build; broad chest; gain weight easily", "dosha": "kapha", "score": 1 } ] },
+    { "id": "weight_tendency", "category": "physical", "question_text": "How does your body weight behave?",
+      "options": [
+        { "text": "I lose weight easily and gain it with difficulty", "dosha": "vata", "score": 1 },
+        { "text": "I gain and lose weight with moderate ease", "dosha": "pitta", "score": 1 },
+        { "text": "I gain weight easily and lose it with difficulty", "dosha": "kapha", "score": 1 } ] },
+    { "id": "skin", "category": "physical", "question_text": "Which best describes your skin?",
+      "options": [
+        { "text": "Dry, rough, thin, cool; veins and tendons are visible", "dosha": "vata", "score": 1 },
+        { "text": "Warm, slightly oily; prone to redness, flushing or freckles", "dosha": "pitta", "score": 1 },
+        { "text": "Thick, smooth, moist, cool and well-lubricated", "dosha": "kapha", "score": 1 } ] },
+    { "id": "hair", "category": "physical", "question_text": "Which best describes your hair?",
+      "options": [
+        { "text": "Dry, thin, frizzy or brittle", "dosha": "vata", "score": 1 },
+        { "text": "Fine and oily; early thinning or early greying", "dosha": "pitta", "score": 1 },
+        { "text": "Thick, heavy, lustrous and wavy", "dosha": "kapha", "score": 1 } ] },
+    { "id": "eyes", "category": "physical", "question_text": "Which best describes your eyes?",
+      "options": [
+        { "text": "Small, dry, restless; thin lashes", "dosha": "vata", "score": 1 },
+        { "text": "Sharp, penetrating, light-sensitive; reddish tone", "dosha": "pitta", "score": 1 },
+        { "text": "Large, moist, calm; thick lashes", "dosha": "kapha", "score": 1 } ] },
+    { "id": "joints", "category": "physical", "question_text": "Which best describes your joints?",
+      "options": [
+        { "text": "Dry and bony; they crack and 'pop' often", "dosha": "vata", "score": 1 },
+        { "text": "Loose and warm; mild inflammation tendency", "dosha": "pitta", "score": 1 },
+        { "text": "Well-lubricated, stable and heavy", "dosha": "kapha", "score": 1 } ] },
+    { "id": "appetite", "category": "digestive", "question_text": "How is your appetite?",
+      "options": [
+        { "text": "Irregular — hunger varies; I sometimes forget to eat", "dosha": "vata", "score": 1 },
+        { "text": "Strong and sharp — I get uncomfortable if a meal is late", "dosha": "pitta", "score": 1 },
+        { "text": "Steady but low — I can skip meals comfortably", "dosha": "kapha", "score": 1 } ] },
+    { "id": "digestion", "category": "digestive", "question_text": "How is your digestion?",
+      "options": [
+        { "text": "Irregular; gas and bloating are common", "dosha": "vata", "score": 1 },
+        { "text": "Quick; heartburn or acidity when aggravated", "dosha": "pitta", "score": 1 },
+        { "text": "Slow but steady; I feel heavy after meals", "dosha": "kapha", "score": 1 } ] },
+    { "id": "thirst", "category": "digestive", "question_text": "How thirsty are you usually?",
+      "options": [
+        { "text": "Variable — it changes day to day", "dosha": "vata", "score": 1 },
+        { "text": "Frequently thirsty; I prefer cold drinks", "dosha": "pitta", "score": 1 },
+        { "text": "Rarely thirsty", "dosha": "kapha", "score": 1 } ] },
+    { "id": "bowel", "category": "digestive", "question_text": "How are your bowel movements?",
+      "options": [
+        { "text": "Irregular, dry, hard; constipation tendency", "dosha": "vata", "score": 1 },
+        { "text": "Regular, sometimes loose or urgent", "dosha": "pitta", "score": 1 },
+        { "text": "Regular, well-formed, sometimes sluggish", "dosha": "kapha", "score": 1 } ] },
+    { "id": "sweating", "category": "digestive", "question_text": "How do you sweat?",
+      "options": [
+        { "text": "Scanty sweat, even with exertion", "dosha": "vata", "score": 1 },
+        { "text": "Profuse sweating; strong odour when hot", "dosha": "pitta", "score": 1 },
+        { "text": "Moderate and steady; mild odour", "dosha": "kapha", "score": 1 } ] },
+    { "id": "sleep_pattern", "category": "digestive", "question_text": "How do you typically sleep?",
+      "options": [
+        { "text": "Light, interrupted; vivid dreams of movement or flying", "dosha": "vata", "score": 1 },
+        { "text": "Moderate, sound but short; work-related dreams", "dosha": "pitta", "score": 1 },
+        { "text": "Deep, long and heavy; hard to wake up", "dosha": "kapha", "score": 1 } ] },
+    { "id": "memory", "category": "mental", "question_text": "How is your memory?",
+      "options": [
+        { "text": "Quick to learn, quick to forget", "dosha": "vata", "score": 1 },
+        { "text": "Sharp and accurate", "dosha": "pitta", "score": 1 },
+        { "text": "Slow to learn, but it stays for a long time", "dosha": "kapha", "score": 1 } ] },
+    { "id": "temperament", "category": "mental", "question_text": "What is your temperament under stress?",
+      "options": [
+        { "text": "Enthusiastic and imaginative, but I worry", "dosha": "vata", "score": 1 },
+        { "text": "Focused and driven, but I get irritable", "dosha": "pitta", "score": 1 },
+        { "text": "Calm, steady and forgiving; I withdraw", "dosha": "kapha", "score": 1 } ] },
+    { "id": "speech", "category": "mental", "question_text": "How do you speak?",
+      "options": [
+        { "text": "Fast, talkative, sometimes scattered", "dosha": "vata", "score": 1 },
+        { "text": "Precise, convincing and sharp", "dosha": "pitta", "score": 1 },
+        { "text": "Slow, soft and melodious", "dosha": "kapha", "score": 1 } ] },
+    { "id": "decisions", "category": "mental", "question_text": "How do you make decisions?",
+      "options": [
+        { "text": "I change my mind quickly; often indecisive", "dosha": "vata", "score": 1 },
+        { "text": "I decide quickly and confidently", "dosha": "pitta", "score": 1 },
+        { "text": "I take time, but I stick with my decisions", "dosha": "kapha", "score": 1 } ] },
+    { "id": "learning", "category": "mental", "question_text": "How do you learn best?",
+      "options": [
+        { "text": "By listening and discussing", "dosha": "vata", "score": 1 },
+        { "text": "By reading and reasoning", "dosha": "pitta", "score": 1 },
+        { "text": "By hands-on repetition", "dosha": "kapha", "score": 1 } ] },
+    { "id": "climate", "category": "lifestyle", "question_text": "Which climate suits you best?",
+      "options": [
+        { "text": "Warm climates; I dislike wind and cold", "dosha": "vata", "score": 1 },
+        { "text": "Cool climates; I dislike heat and sun", "dosha": "pitta", "score": 1 },
+        { "text": "Warm and dry climates; I dislike damp and cold", "dosha": "kapha", "score": 1 } ] },
+    { "id": "activity_pace", "category": "lifestyle", "question_text": "What is your natural pace of activity?",
+      "options": [
+        { "text": "Fast and energetic in bursts; restless", "dosha": "vata", "score": 1 },
+        { "text": "Purposeful, competitive, moderately fast", "dosha": "pitta", "score": 1 },
+        { "text": "Relaxed, methodical and steady", "dosha": "kapha", "score": 1 } ] },
+    { "id": "dreams", "category": "lifestyle", "question_text": "What are your dreams usually like?",
+      "options": [
+        { "text": "Frequent and vivid — flying, jumping, running", "dosha": "vata", "score": 1 },
+        { "text": "Intense — sun, fire, competition, arguments", "dosha": "pitta", "score": 1 },
+        { "text": "Few dreams — calm water, snow, romance", "dosha": "kapha", "score": 1 } ] }
+  ]
+}

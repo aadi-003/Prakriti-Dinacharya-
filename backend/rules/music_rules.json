@@ -1,0 +1,36 @@
+{
+  "_doc": "Raga suggestions are traditional wellness associations from Indian classical listening practice. Evidence is anecdotal; treat them as calming/focus suggestions, not therapy. Loaded at request time.",
+  "by_dosha": {
+    "vata": {
+      "goal": "Calm, ground and settle a busy mind",
+      "evening": ["Yaman", "Charukesi"],
+      "night": ["Malkauns", "Bhairavi"],
+      "instruments": ["santoor", "bansuri (bamboo flute)", "soft sitar"],
+      "note": "Choose slow, quiet renditions; keep volume low and avoid fast, jittery passages."
+    },
+    "pitta": {
+      "goal": "Cool and soothe intensity",
+      "evening": ["Bhairav", "Todi"],
+      "night": ["Darbari Kanada", "Yaman"],
+      "instruments": ["bansuri (bamboo flute)", "santoor", "veena"],
+      "note": "Avoid dramatic or fiery performances; favour meditative, alaap-based renditions."
+    },
+    "kapha": {
+      "goal": "Gently uplift and energize",
+      "evening": ["Bhupali", "Durga"],
+      "night": ["Hamsadhwani", "Bhairavi"],
+      "instruments": ["sitar", "light tabla", "bansuri (bamboo flute)"],
+      "note": "Slightly brighter rhythms are fine earlier in the evening; keep pre-bed listening soft."
+    }
+  },
+  "by_season": {
+    "Summer": { "ragas": ["Bhairavi", "Todi"], "note": "Traditionally associated with cooling, soothing moods." },
+    "Monsoon": { "ragas": ["Miyan ki Malhar", "Megh"], "note": "The classical monsoon raga family." },
+    "Autumn": { "ragas": ["Puriya Dhanashree", "Yaman"], "note": "Warm, grounding evening suggestions." },
+    "Winter": { "ragas": ["Bihag", "Yaman"], "note": "Warm, serene ragas for long evenings." },
+    "Spring": { "ragas": ["Basant", "Bahar"], "note": "Classical spring ragas with a light, fresh mood." }
+  },
+  "work_focus": {
+    "suggestion": "Instrumental only (sitar, santoor or bansuri) at low volume during deep-work sessions — search for an Indian classical instrumental study playlist."
+  }
+}
