@@ -135,9 +135,10 @@ export default function App() {
               <p className="muted">{questionnaire.instructions}</p>
               <p className="muted">Answered: {Object.keys(answers).length} / {questionnaire.questions.length}</p>
               {questionnaire.provenance?.status && (
-                <div className="disclaimer-box">
-                  <b>Note:</b> {questionnaire.provenance.status} — {questionnaire.provenance.note}
-                </div>)}
+              <div className="disclaimer-box">
+                <b>Source:</b> {questionnaire.provenance.status} — {questionnaire.provenance.source}
+                <ul className="clean">{(questionnaire.provenance.notes || []).map((n, i) => <li key={i}>{n}</li>)}</ul>
+              </div>)}
             </div>
             {(questionnaire.sections || []).map((sec) => (
               <div className="card" key={sec.id}>
@@ -148,12 +149,12 @@ export default function App() {
                   if (!q) return null;
                   return (
                     <div key={qid}>
-                      <label className="field">{q.question_text}</label>
-                      {q.options.map((o, i) => (
-                        <label className="option" key={i}>
-                          <input type="radio" name={qid} checked={answers[qid] === i}
-                                 onChange={() => setAnswers({ ...answers, [qid]: i })} />
-                          <span>{o.text}</span>
+                      <label className="field">{q.text}</label>
+                      {["yes", "no"].map((val) => (
+                        <label className="option" key={val}>
+                          <input type="radio" name={qid} checked={answers[qid] === val}
+                                onChange={() => setAnswers({ ...answers, [qid]: val })} />
+                          <span>{val === "yes" ? "Yes" : "No"}</span>
                         </label>))}
                     </div>);
                 })}
@@ -176,6 +177,19 @@ export default function App() {
           </div>
         </div>
         <p><b>Constitution type:</b> {prakriti.dosha_type}</p>
+        <div className="disclaimer-box">
+          <b>Original instrument scores (source formula):</b>
+          {["vata", "pitta", "kapha"].map((d) => (
+            <div key={d}>
+              {d[0].toUpperCase() + d.slice(1)}: {prakriti.raw_scores[d]} / {prakriti.max_scores[d]} points
+              → <b>{prakriti.source_percentages[d]}%</b>
+            </div>
+          ))}
+          <p className="muted">Formula from the source questionnaire: % of dosha = 100 × your score ÷ that
+          dosha's maximum (Kapha 1440, Pitta 599, Vata 960). These three percentages intentionally do
+          <b>not</b> sum to 100%. The donut chart above shows your relative distribution (normalized to
+          100%), which the rest of the app uses.</p>
+        </div>
         <p className="muted">Dominant: {prakriti.dominant} · Secondary: {prakriti.secondary} ·
            Scored from {prakriti.answered_count}/{prakriti.total_questions} questions. These percentages are
            calculated dynamically from your responses — nothing is hardcoded.</p>

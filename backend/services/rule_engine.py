@@ -95,26 +95,31 @@ def largest_remainder(scores: dict) -> dict:
 
 
 def validate_questionnaire(q: dict) -> dict:
-    """Structural validation so malformed questionnaire data fails loudly, never silently."""
+    """Structural validation for the binary-checklist questionnaire format."""
     if not isinstance(q, dict) or not isinstance(q.get("questions"), list) or not q["questions"]:
         raise AppError(500, "questionnaire_malformed",
                        "Questionnaire must contain a non-empty 'questions' list.")
+    if q.get("format") != "binary_checklist":
+        raise AppError(500, "questionnaire_malformed",
+                       "Questionnaire 'format' must be 'binary_checklist'.")
     seen = set()
     for i, item in enumerate(q["questions"]):
         qid = item.get("id")
         if not qid or qid in seen:
             raise AppError(500, "questionnaire_malformed", f"Question #{i + 1} has a missing or duplicate id.")
         seen.add(qid)
-        opts = item.get("options")
-        if not isinstance(opts, list) or len(opts) < 2:
-            raise AppError(500, "questionnaire_malformed", f"Question '{qid}' needs at least 2 options.")
-        doshas = set()
-        for o in opts:
-            if not o.get("text") or o.get("dosha") not in DOSHAS:
+        if item.get("section") not in DOSHAS:
+            raise AppError(500, "questionnaire_malformed", f"Question '{qid}' has an invalid section.")
+        if not item.get("text"):
+            raise AppError(500, "questionnaire_malformed", f"Question '{qid}' has no text.")
+        if item.get("scoring_answer") not in ("yes", "no"):
+            raise AppError(500, "questionnaire_malformed", f"Question '{qid}' needs scoring_answer 'yes' or 'no'.")
+        score = item.get("score")
+        if not isinstance(score, (int, float)) or isinstance(score, bool) or score <= 0:
+            raise AppError(500, "questionnaire_malformed", f"Question '{qid}' needs a positive numeric score.")
+    for sec in q.get("sections", []):
+        for qid in sec.get("question_ids", []):
+            if qid not in seen:
                 raise AppError(500, "questionnaire_malformed",
-                               f"Question '{qid}' has an option missing text or a valid dosha.")
-            doshas.add(o["dosha"])
-        if len(doshas) != len(opts):
-            raise AppError(500, "questionnaire_malformed",
-                           f"Question '{qid}' has multiple options mapped to the same dosha.")
+                               f"Section '{sec.get('id')}' references unknown question '{qid}'.")
     return q
